@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  height: 5000px;
+}
+:root {
+  --color: #0984e3;
+}
+.plaette-colors {
+  background-color: var(--color);
+  list-style: none;
+  padding: 10px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s all;
+  z-index: -1;
+  display: none;
+}
+.show-colors {
+  display: flex;
+}
+.plaette-colors .colors {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+.plaette-colors li:first-child {
+  background-color: #0984e3;
+}
+.plaette-colors li:nth-child(2) {
+  background-color: #f1c40f;
+}
+.plaette-colors li:nth-child(3) {
+  background-color: #6c5ce7;
+}
+.plaette-colors li:nth-child(4) {
+  background-color: #27ae60;
+}
+
+/* ---------------------------------------- */
+
+.palette-container {
+  color: #fff;
+  position: fixed;
+}
+.palette-container .icon-theme {
+  background-color: var(--color);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.palette-container .icon-theme svg {
+  animation: logo-spin infinite 10s linear;
+  -webkit-animation: logo-spin infinite 10s linear;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+/* ================================================ */
+main {
+  background-color: #eee;
+  width: 80%;
+  margin: 50px auto 0;
+  padding: 20px 20px;
+  border: 2px solid var(--color);
+  box-shadow: 0px 4px 8px var(--color), 0px 10px 20px var(--color);
+}
+main h1 {
+  font-size: 26px;
+  color: var(--color);
+  margin-bottom: 10px;
+}
+main button {
+  padding: 10px 20px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--color);
+  color: #fff;
+}
+main .btn-fill {
+  background-color: var(--color);
+}
